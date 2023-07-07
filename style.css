@@ -1,0 +1,610 @@
+@import url('https://font.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+
+
+
+body {
+    background-color: rgba(23, 22, 26, 0.992);
+    motion-offset: 0rem;
+    scroll-behavior: smooth;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 70%;
+    min-width: 600px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 50px;
+    z-index: 10;
+    background-color: #2b537e12;
+    border-radius: 20px;
+    backdrop-filter:
+        blur(50px);
+}
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 400;
+    transition: 0.6s;
+    text-transform: uppercase;
+}
+
+header ul li a:hover {
+    color: yellow;
+    /* font-size: 1.2rem; */
+    border-bottom: 2px solid yellow;
+}
+
+.sun {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    background: radial-gradient(closest-side at 60% 55%, red, orange, yellow);
+    border-radius: 70%;
+    display: inline-block;
+    top: 17rem;
+    right: 50rem;
+    border: none;
+    z-index: 1;
+    box-shadow: 0px 0px 60px 20px yellow;
+    animation-name: displaceContent;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displaceContent {
+    0% {
+        transform: translateY(0em)
+    }
+
+    50% {
+        transform: translateX(3em)
+    }
+
+    /* slide down to make room for advertisements */
+    100% {
+        transform: translateY(0em)
+    }
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(./assets/tamalsen-home-cover.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px -100px 60px 2px rgba(23, 22, 26, 0.992) inset;
+}
+
+.banner .intro {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    z-index: 5;
+
+}
+
+.banner .intro h1 {
+    font-size: 10rem;
+    font-weight: 900;
+}
+
+.banner .intro p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.contact {
+    padding: 15px 30px;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    transition: 0.6s;
+}
+
+.contact:hover {
+    box-shadow: 0 0 70px 10px orange;
+}
+
+.about .inner-box {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 15%;
+}
+
+.section {
+    margin: 17rem auto;
+}
+
+.heading {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #2b537e;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.about .desc p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.special {
+    color: #2f74bd;
+    font-weight: bold;
+}
+
+/* 
+hr {
+    border: 1px solid rgba(255, 255, 0, 0.664);
+    margin: 5% 10%;
+} */
+
+.tab {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 5rem auto;
+    gap: 12px;
+    width: 60%;
+    font-size: 1.15rem;
+    color: #fff;
+}
+
+.ro1,
+.ro2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ro1 {
+    color: #2f74bd;
+    font-size: 1.5rem;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.wrap-collabsible {
+    margin: 1.2rem 0;
+}
+
+.lbl-toggle {
+    display: block;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    color: #DDD;
+    background: #0069ff;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+    color: #FFF;
+}
+
+.lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+    transition: transform .2s ease-out;
+}
+
+.toggle:checked+.lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked+.lbl-toggle+.collapsible-content {
+    max-height: 350px;
+}
+
+.toggle:checked+.lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+    background: rgba(0, 105, 255, .2);
+    border-bottom: 1px solid rgba(0, 105, 255, .45);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: .5rem 1rem;
+    color: black;
+}
+
+.collapsible-content p {
+    margin-bottom: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.course {
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: yellow;
+}
+
+.skill img {
+    height: 150px;
+    width: 150px;
+}
+
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 10%;
+    margin-top: 7rem;
+    margin-left: 13%;
+    gap: 2rem;
+}
+
+/* 
+mediaquery-1 : 1400px
+*/
+/* .projects .heading{
+    margin-bottom: 3rem;
+} */
+.project-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.project-card {
+    width: 90%;
+    height: 550px;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 0px 40px #1f1f1f;
+}
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1f1f1f9a;
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: all 0.4s;
+    z-index: 0;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg, #2b537e5a, #2f74bd5a);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+    z-index: 1;
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
+}
+
+#card-1 {
+    background-image: url(./assets/tamalsen-home-cover.jpg);
+    margin: 5rem auto;
+}
+
+.project-number {
+    font-size: 200px;
+    position: absolute;
+    color: white;
+    font-weight: 600;
+    z-index: 10;
+    display: none;
+}
+
+.project-card:hover .project-number {
+    display: block;
+}
+
+.project-number-left {
+    top: -45px;
+    right: -40px;
+}
+
+.project-number-right {
+    top: -45px;
+    left: -40px;
+}
+
+.project-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    z-index: 5;
+    gap: 1em;
+    transition: all 0.8s;
+}
+
+.project-card:hover .project-content {
+    transform: scale(1.1);
+}
+
+.project-content-left {
+    left: 10%;
+}
+
+.project-content-right {
+    left: 30%;
+}
+
+.project-skills-container {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-skill {
+    width: 40px;
+    height: 40px;
+}
+
+.project-heading {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.project-subheading {
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn-project {
+    border: none;
+}
+
+.btn-project:hover {
+    border: none;
+}
+
+.icon {
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    transition: all 0.3s;
+}
+
+.icon:hover {
+    color: #e84949;
+}
+
+@media (max-width:1200px) {
+    .page-header {
+        padding-top: 30px;
+        color: var(--bgOrange);
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .project-container {
+        padding: 5px;
+        margin: 10px;
+        gap: 60px;
+    }
+
+    .project-card {
+        width: 100%;
+        height: 300px;
+    }
+
+    .project-card {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .project-content {
+        scale: 0.5;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .project-content-left {
+        left: 0;
+    }
+
+    .project-heading {
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .project-sub-heading {
+        width: 100%;
+    }
+
+    #card-2 {
+        margin-left: 0;
+    }
+
+    #card-4 {
+        margin-left: 0;
+    }
+
+    .project-skill-container {
+        width: 100%;
+    }
+
+    .project-skill {
+        width: 35px;
+    }
+
+    .project-card:hover .project-number {
+        display: none;
+    }
+
+    .project-card:hover .project-content {
+        scale: 0.55;
+    }
+}
+
+.experience .content  {
+    color: #FFF;
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    padding: 2rem;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.handle {
+    width: 70%;
+    margin: auto;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}
+.time{
+    font-size: 1.15rem;
+    color: #2f74bd;
+}
+
+.experience .content ul li{
+    font-size: 1.25rem;
+    margin: 5px;
+    margin-left: -3rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5rem;
+}
+
+.footer .nav ul li {
+    list-style: none;
+    font-size: 1.15rem;
+    margin: 10px;
+    color: white;
+}
