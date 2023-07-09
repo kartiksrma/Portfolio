@@ -691,7 +691,7 @@ mediaquery-1 : 1400px
 }
 
 .nav__ul--extra {
-    column-count: 2;
+    column-count: 1;
     column-gap: 1.25em;
 }
 
